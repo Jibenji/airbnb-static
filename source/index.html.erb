@@ -1,14 +1,14 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
   <div class="banner-content">
-    <h1>Some Stuff</h1>
+    <h1>First Middleman Page</h1>
     <p>Very cool stuff, useful and smart</p>
     <form action="" class="form-inline">
       <input type="text" class="form-control input-lg" placeholder="check-in date">
       <input type="text" class="form-control input-lg" placeholder="check-out date">
       <select class="form-control input-lg">
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
+        <option value="1">Middleman 1</option>
+        <option value="2">Middleman 2</option>
+        <option value="3">Middleman 3</option>
       </select>
       <a class="btn btn-primary btn-lg">Search</a>
     </form>
@@ -97,115 +97,21 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
 <script type="text/javascript">
-  var myLatlng = new google.maps.LatLng(42.1074936,9.1070949);
+var myLatlng = new google.maps.LatLng(48.852937,2.364178);
 
-  var myOptions = {
-    zoom: 8,
-    center: myLatlng,
-    scrollwheel: false,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    styles: [
-    {
-      "featureType": "landscape",
-      "elementType": "all",
-      "stylers": [
-      {
-        "hue": "#FFA800"
-      },
-      {
-        "gamma": 1
-      }
-      ]
-    },
-    {
-      "featureType": "poi",
-      "elementType": "all",
-      "stylers": [
-      {
-        "hue": "#679714"
-      },
-      {
-        "saturation": 33.4
-      },
-      {
-        "lightness": -25.4
-      },
-      {
-        "gamma": 1
-      }
-      ]
-    },
-    {
-      "featureType": "road.highway",
-      "elementType": "all",
-      "stylers": [
-      {
-        "hue": "#53FF00"
-      },
-      {
-        "saturation": -73
-      },
-      {
-        "lightness": 40
-      },
-      {
-        "gamma": 1
-      }
-      ]
-    },
-    {
-      "featureType": "road.arterial",
-      "elementType": "all",
-      "stylers": [
-      {
-        "hue": "#FBFF00"
-      },
-      {
-        "gamma": 1
-      }
-      ]
-    },
-    {
-      "featureType": "road.local",
-      "elementType": "all",
-      "stylers": [
-      {
-        "hue": "#00FFFD"
-      },
-      {
-        "lightness": 30
-      },
-      {
-        "gamma": 1
-      }
-      ]
-    },
-    {
-      "featureType": "water",
-      "elementType": "all",
-      "stylers": [
-      {
-        "hue": "#00BFFF"
-      },
-      {
-        "saturation": 6
-      },
-      {
-        "lightness": 8
-      },
-      {
-        "gamma": 1
-      }
-      ]
-    }
-] // TODO: replace [] by array from https://snazzymaps.com/
+var myOptions = {
+  zoom: 16,
+  center: myLatlng,
+  scrollwheel: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP,
+  styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
 };
 
 var map = new google.maps.Map(document.getElementById('map'), myOptions);
 var marker = new google.maps.Marker({
   position: myLatlng,
   map: map,
-  title: "You are here!"
+  title:"You are here!"
 });
 </script>
 
