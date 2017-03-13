@@ -1,0 +1,17 @@
+<div class="container text-center padded">
+  <ul class="list-inline text-center">
+    <h1>Our Team</h1>
+    <% ["anne", "seb", "romain"].each do |member| %>
+    <li>
+      <%= image_tag "#{member}.jpg", class: "img-circle", width: 100 %>
+      <h3><%= member.capitalize %></h3>
+    </li>
+    <% end %>
+    <h3 class="padded">
+      <a href="">
+        <i class="fa fa-envelope"></i>
+        contact@jibenji.com
+      </a>
+    </h3>
+  </ul>
+</div>
