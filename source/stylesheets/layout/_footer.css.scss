@@ -1,7 +1,7 @@
 /* Footer design */
 #footer{
   color: white;
-  background-color: #484848;
+  background-color: $grey-footer;
   padding: 30px 0px;
   font-size: 30px;
   padding-left: 5px;
@@ -21,6 +21,6 @@
 }
 
 #footer .fa:hover {
-  color: #D03B43;
+  color: $jasper;
 }
 /* Footer design */
